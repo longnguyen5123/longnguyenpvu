@@ -25,3 +25,17 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 
 #contact>div:first-child{flex:1;max-width:760px}#contact-links{flex-direction:column;gap:8px;flex-shrink:0}
 #contact-links{display:block}#contact-links .contact-line{display:block;line-height:1.8}#contact-links .contact-line+.contact-line{margin-top:10px}#contact-links .contact-line span{color:var(--muted);margin-right:6px}
+/* Student profile: photo and information side by side. */
+.hero{grid-template-columns:minmax(0,1.15fr) minmax(420px,1fr);gap:40px}
+.profile-card{padding:26px}
+.profile-card>.eyebrow{padding-bottom:18px;border-bottom:1px solid #36515f;margin-bottom:22px}
+.profile-id-body{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1fr);gap:24px;align-items:center}
+.profile-card .avatar{float:none;margin:0;width:100%;height:auto;aspect-ratio:1159/1357;border-radius:8px;background:#e6eef1;overflow:hidden}
+.profile-card .avatar img{display:block;width:100%;height:100%;object-fit:contain}
+.profile-id-info{min-width:0}
+.profile-card .id-name{font-size:1.3rem;letter-spacing:-.02em;margin:0 0 16px;line-height:1.35}
+.profile-card dl{display:block;clear:none;margin:0}
+.profile-card dt{margin-top:12px;font-size:.78rem}
+.profile-card dd{font-size:.92rem;line-height:1.5;margin:3px 0 0}
+@media(max-width:1000px){.hero{grid-template-columns:1fr;gap:32px}.profile-card{width:100%;max-width:580px}.profile-card .avatar{max-width:220px}}
+@media(max-width:560px){.profile-card{padding:20px}.profile-id-body{grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:16px}.profile-card .id-name{font-size:1.1rem}.profile-card dd{font-size:.85rem}.profile-card dt{font-size:.75rem}}
