@@ -85,3 +85,16 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .feedback-dialog{position:fixed;inset:0;margin:auto}
+/* Petroleum-inspired section banners: strong headings, quiet reading surfaces. */
+.section-head{position:relative;isolation:isolate;overflow:hidden;padding:30px 32px;min-height:150px;border-radius:14px;background:#102f40;border:1px solid #234756;color:#fff;align-items:center}
+.section-head>div,.section-head>.section-no{position:relative;z-index:1}
+.section-head h2{color:#fff;text-shadow:0 1px 8px #071c3020}
+.section-head p{color:#e1ebef}.section-head p.eyebrow{color:#acecde;margin-bottom:9px}
+.section-head .section-no{color:#cee2e8;align-self:flex-start;font-size:.8rem;letter-spacing:.05em}
+#assignments>.section-head{background:linear-gradient(90deg,rgba(9,35,50,.98) 0%,rgba(9,35,50,.90) 48%,rgba(9,35,50,.30) 100%),url('https://long-geology-portfolio.kagi5197.chatgpt.site/petroleum-hero.webp') 80% 53%/cover no-repeat}
+#research>.section-head{background:linear-gradient(90deg,#10353c 0%,rgba(16,53,60,.94) 40%,rgba(16,53,60,.1) 100%),repeating-radial-gradient(ellipse at 95% 150%,transparent 0 14px,rgba(141,223,199,.36) 15px 16px,transparent 17px 28px),#16414a}
+#methodology>.section-head{background:linear-gradient(90deg,#112f47 0%,rgba(17,47,71,.93) 46%,rgba(17,47,71,.1) 100%),repeating-radial-gradient(ellipse at 100% 50%,transparent 0 17px,rgba(140,192,214,.29) 18px 19px,transparent 20px 34px),repeating-linear-gradient(90deg,transparent 0 47px,rgba(143,190,212,.10) 48px 49px),#163e53}
+#contact{position:relative;isolation:isolate;margin-top:14px;padding:34px 32px;border:1px solid #294b5d;border-radius:14px;color:#fff;background:linear-gradient(90deg,rgba(10,35,51,.97),rgba(10,35,51,.88) 62%,rgba(10,35,51,.70)),url('https://long-geology-portfolio.kagi5197.chatgpt.site/petroleum-hero.webp') center 70%/cover no-repeat}
+#contact h3{color:#fff;font-size:1.45rem;margin-bottom:12px}#contact p,#contact-links .contact-line span{color:#dce9ef}#contact a{color:#b8f5e5;font-weight:600}#contact a:hover{color:#fff}
+@media(max-width:700px){.section-head{padding:24px 22px;min-height:140px;align-items:flex-start}.section-head .section-no{display:none}.section-head h2{font-size:1.9rem}.section-head p{font-size:.95rem}#contact{padding:28px 22px;flex-direction:column;align-items:flex-start;gap:24px}#contact-links{max-width:100%;overflow-wrap:anywhere}#assignments>.section-head{background-position:70% 50%}}
+@media print{.section-head,#contact{background:#fff!important;border:1px solid #aaa;color:#142d3c}.section-head h2,.section-head p,.section-head .section-no,#contact h3,#contact p,#contact a,#contact-links .contact-line span{color:#142d3c!important}}
