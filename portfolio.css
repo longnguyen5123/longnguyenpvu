@@ -105,3 +105,14 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 .brand{min-width:0;max-width:100%}.brand>span:last-child{min-width:0}.brand small{display:block;font-size:.875rem;line-height:1.5;white-space:normal}
 @media(max-width:1000px){.side{flex-wrap:wrap}.nav{flex-wrap:wrap}}
 @media(max-width:800px){.brand small{display:block}.section-kicker{font-size:.8125rem;margin-bottom:20px;padding-bottom:14px}}
+
+/* Independent assignment disclosures; objective and action buttons stay visible. */
+.assignment-objective{margin:24px 0 18px}
+.assignment-more{border-top:1px solid var(--line);margin-top:18px}
+.assignment .assignment-more>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 0;color:var(--teal);font-size:.95rem;font-weight:650;list-style:none;cursor:pointer;border-radius:4px}
+.assignment .assignment-more>summary:hover{background:#f4f9fa}
+.assignment-more>summary::-webkit-details-marker{display:none}
+.assignment-more .collapse-label{display:none}.assignment-more[open] .collapse-label{display:inline}.assignment-more[open] .expand-label{display:none}
+.disclosure-arrow{font-size:1.4rem;line-height:1}.assignment-more[open] .disclosure-arrow{transform:rotate(180deg)}
+.assignment-more>.assignment-detail-grid{margin:8px 0 24px}.assignment-more>.assignment-detail-grid>.assignment-detail:first-child{grid-column:auto}
+@media print{.assignment-more>summary{display:none!important}.assignment-more::details-content{content-visibility:visible}.assignment-more>.assignment-detail-grid{display:grid!important}}

@@ -11,7 +11,9 @@
       if (!response.ok) throw new Error('Unavailable');
       const data = await response.json();
       if (![data.assignmentsHtml,data.projectsHtml].every(x => typeof x === 'string')) throw new Error('Invalid response');
+      const expanded = new Set(Array.from(assignments.querySelectorAll('details.assignment-more[open]'), node => node.dataset.assignmentId));
       assignments.innerHTML = data.assignmentsHtml;
+      assignments.querySelectorAll('details.assignment-more').forEach(node => {node.open = expanded.has(node.dataset.assignmentId);});
       projects.innerHTML = data.projectsHtml;
     } catch {
       for (const target of [assignments,projects]) {
