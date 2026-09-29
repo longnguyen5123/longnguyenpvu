@@ -98,3 +98,10 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 #contact h3{color:#fff;font-size:1.45rem;margin-bottom:12px}#contact p,#contact-links .contact-line span{color:#dce9ef}#contact a{color:#b8f5e5;font-weight:600}#contact a:hover{color:#fff}
 @media(max-width:700px){.section-head{padding:24px 22px;min-height:140px;align-items:flex-start}.section-head .section-no{display:none}.section-head h2{font-size:1.9rem}.section-head p{font-size:.95rem}#contact{padding:28px 22px;flex-direction:column;align-items:flex-start;gap:24px}#contact-links{max-width:100%;overflow-wrap:anywhere}#assignments>.section-head{background-position:70% 50%}}
 @media print{.section-head,#contact{background:#fff!important;border:1px solid #aaa;color:#142d3c}.section-head h2,.section-head p,.section-head .section-no,#contact h3,#contact p,#contact a,#contact-links .contact-line span{color:#142d3c!important}}
+
+/* Bilingual section introductions and the complete brand subtitle. */
+.section-kicker{display:flex;align-items:center;gap:18px;margin:0 0 24px;padding:0 0 18px;border-bottom:1px solid var(--line);font-size:.875rem;line-height:1.6;color:var(--muted);letter-spacing:.025em}
+.contact-kicker{margin-top:16px;margin-bottom:24px}
+.brand{min-width:0;max-width:100%}.brand>span:last-child{min-width:0}.brand small{display:block;font-size:.875rem;line-height:1.5;white-space:normal}
+@media(max-width:1000px){.side{flex-wrap:wrap}.nav{flex-wrap:wrap}}
+@media(max-width:800px){.brand small{display:block}.section-kicker{font-size:.8125rem;margin-bottom:20px;padding-bottom:14px}}
