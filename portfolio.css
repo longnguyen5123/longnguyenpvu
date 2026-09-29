@@ -116,3 +116,9 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 .disclosure-arrow{font-size:1.4rem;line-height:1}.assignment-more[open] .disclosure-arrow{transform:rotate(180deg)}
 .assignment-more>.assignment-detail-grid{margin:8px 0 24px}.assignment-more>.assignment-detail-grid>.assignment-detail:first-child{grid-column:auto}
 @media print{.assignment-more>summary{display:none!important}.assignment-more::details-content{content-visibility:visible}.assignment-more>.assignment-detail-grid{display:grid!important}}
+
+/* Center the plus/minus control within the right edge of each disclosure row. */
+.assignment .assignment-more>summary{padding:14px 16px;min-height:56px;align-items:center}
+.assignment-more .disclosure-arrow{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;margin-left:auto;font-size:1.55rem;line-height:1;transform:none}
+.assignment-more[open] .disclosure-arrow{transform:none}
+.disclosure-arrow .disclosure-minus{display:none}.assignment-more[open] .disclosure-plus{display:none}.assignment-more[open] .disclosure-minus{display:block}
