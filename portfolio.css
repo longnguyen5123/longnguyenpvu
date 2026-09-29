@@ -121,4 +121,4 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 .assignment .assignment-more>summary{padding:14px 16px;min-height:56px;align-items:center}
 .assignment-more .disclosure-arrow{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;margin-left:auto;font-size:1.55rem;line-height:1;transform:none}
 .assignment-more[open] .disclosure-arrow{transform:none}
-.disclosure-arrow .disclosure-minus{display:none}.assignment-more[open] .disclosure-plus{display:none}.assignment-more[open] .disclosure-minus{display:block}
+.assignment-more .disclosure-arrow::before{content:"+"}.assignment-more[open] .disclosure-arrow::before{content:"−"}
