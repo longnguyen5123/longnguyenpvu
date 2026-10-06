@@ -155,5 +155,7 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 .category-count{font-size:13px;border-radius:20px;padding:2px 7px;background:#ffffff30}
 .coursework-menu button:focus-visible{outline:2px solid #138a85;outline-offset:2px}
 .profile-id-info #profile-facts{margin-top:0}
-.profile-id-body{align-items:stretch}
+.profile-id-body{align-items:start}
+.profile-card .avatar{align-self:start}
+.profile-card .avatar img{height:auto;object-fit:cover}
 @media(max-width:900px){.side{flex-wrap:wrap}.nav{flex-wrap:wrap}.coursework-layout{grid-template-columns:1fr}.coursework-menu{position:static;display:flex}.coursework-menu button{flex:1}.language-switch{margin-left:0}}
