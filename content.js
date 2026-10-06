@@ -15,6 +15,7 @@
       assignments.innerHTML = data.assignmentsHtml;
       assignments.querySelectorAll('details.assignment-more').forEach(node => {node.open = expanded.has(node.dataset.assignmentId);});
       projects.innerHTML = data.projectsHtml;
+      document.dispatchEvent(new CustomEvent('portfolio:content'));
     } catch {
       for (const target of [assignments,projects]) {
         target.replaceChildren();
