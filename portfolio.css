@@ -159,3 +159,7 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 .profile-card .avatar{align-self:start}
 .profile-card .avatar img{height:auto;object-fit:cover}
 @media(max-width:900px){.side{flex-wrap:wrap}.nav{flex-wrap:wrap}.coursework-layout{grid-template-columns:1fr}.coursework-menu{position:static;display:flex}.coursework-menu button{flex:1}.language-switch{margin-left:0}}
+
+/* Use available desktop space while keeping text readable. */
+@media(min-width:1200px){#website>main{width:94%;max-width:2200px;padding-left:clamp(24px,2vw,56px);padding-right:clamp(24px,2vw,56px)}#website>.side{padding-left:max(3vw,calc((100vw - 2200px)/2 + 40px));padding-right:max(3vw,calc((100vw - 2200px)/2 + 40px))}.assignment-final p{max-width:100%}.assignment-copy>p{max-width:95ch}.hero .lead{max-width:72ch}.coursework-layout{grid-template-columns:180px minmax(0,1fr)}}
+.attachment-link{overflow-wrap:anywhere;white-space:normal}.translation-notice{color:#526d7b;font-style:italic}

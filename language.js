@@ -172,7 +172,9 @@
  const map = new Map(Object.entries(dictionary).map(([a,b]) => [clean(a),b]));
  let lang = 'vi'; try {lang = localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'vi';} catch {}
  const originals = new WeakMap(), attributes = new WeakMap();
- const selectors = {title:'h3',course:'.course',status:'.status',summary:'.assignment-copy > p',objective:'.assignment-objective p',method:'.assignment-detail-grid .assignment-detail:nth-child(1) p',results:'.assignment-detail-grid .assignment-detail:nth-child(2) p',role:'.assignment-detail-grid .assignment-detail:nth-child(3) p',aiSupport:'.assignment-detail-grid .assignment-detail:nth-child(4) p',linkLabel:'.assignment-actions a'};
+ const selectors = {title:'h3',course:'.course',status:'.status',summary:'.assignment-copy > p',objective:'.assignment-objective p',method:'.assignment-detail-grid .assignment-detail:nth-child(1) p',results:'.assignment-detail-grid .assignment-detail:nth-child(2) p',role:'.assignment-detail-grid .assignment-detail:nth-child(3) p',aiSupport:'.assignment-detail-grid .assignment-detail:nth-child(4) p',linkLabel:'.assignment-actions .work-link'};
+ function dates(text){return text.replace(/\b(\d{1,2})([\/.\-])(\d{1,2})\2(\d{4})\b/g,(all,d,sep,m,y)=>{const date=new Date(Date.UTC(+y,+m-1,+d));return date.getUTCFullYear()===+y&&date.getUTCMonth()===+m-1&&date.getUTCDate()===+d?`${String(m).padStart(2,'0')}/${String(d).padStart(2,'0')}/${y}`:all;}).replace(/ngày\s+(\d{1,2})\s+tháng\s+(\d{1,2})\s+năm\s+(\d{4})/gi,(_,d,m,y)=>`${String(m).padStart(2,'0')}/${String(d).padStart(2,'0')}/${y}`);}
+ function statusEnglish(text){return dates(text).replace(/hoàn thành/gi,'Completed').replace(/đã nộp/gi,'Submitted').replace(/chưa nộp/gi,'Not submitted').replace(/đang thực hiện/gi,'In progress').replace(/ngày\s*/gi,'');}
  function translated(text) {return lang === 'en' ? (map.get(clean(text)) || text) : text;}
  let observer;
  function render() {
@@ -203,12 +205,16 @@
    for(const [key,selector] of Object.entries(selectors)) {
     const el=card.querySelector(selector); if(!el)continue;
     if(!el.dataset.originalText) el.dataset.originalText = Array.from(el.childNodes).map(n=>originals.get(n)?.source||n.textContent).join('');
-    const en=data[key];
-    if(lang==='en' && en?.trim()) el.textContent=en+(key==='linkLabel'?' ↗':'');
-    else if (el.dataset.overrideApplied==='true') el.textContent=translated(el.dataset.originalText);
-    el.dataset.overrideApplied=String(lang==='en'&&!!en?.trim());
+    const source=el.dataset.originalText;
+    let en=data[key]?.trim() || map.get(clean(source));
+    if(key==='status'){const status=statusEnglish(source);en=/[À-ỹĐđ]/.test(status)?data[key]?.trim():status;}
+    if(!en)en=/[À-ỹĐđ]/.test(source)?(key==='linkLabel'?'View document ↗':key==='title'?'English title unavailable':'English translation is not available yet. Please select VI to read the original.'):source;
+    const output=lang==='en'?en+(key==='linkLabel'&&data[key]?.trim()?' ↗':''):source;
+    if(el.textContent!==output)el.textContent=output;
+    el.dataset.overrideApplied=String(lang==='en');
    }
   });
+  document.querySelectorAll('.attachment-link').forEach(el=>{const source=el.dataset.labelVi||'Tải tệp đính kèm';const en=el.dataset.labelEn||map.get(clean(source))||'Download attachment';const output=(lang==='en'?en:source)+' ↓';if(el.textContent!==output)el.textContent=output;});
   observer?.observe(document.body,{childList:true,subtree:true,characterData:true});
  }
  window.portfolioI18n={get lang(){return lang;},text:translated,refresh:render};
