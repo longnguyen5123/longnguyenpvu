@@ -1,5 +1,5 @@
 (() => {
-  const endpoint = 'https://long-geology-portfolio.kagi5197.chatgpt.site/api/public-content';
+  const endpoint = 'https://woixyavhrjdfwnxrcggn.supabase.co/functions/v1/portfolio-api/public-content';
   const assignments = document.getElementById('live-assignments');
   const projects = document.getElementById('live-projects');
   let loading = false;

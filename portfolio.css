@@ -66,7 +66,7 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 .prompt-card p{font-size:.93rem;color:var(--muted);margin:0}.method-reflection{margin-top:28px}
 @media(max-width:700px){.assignment-detail-grid,.prompt-grid{grid-template-columns:1fr}.method-block{padding:20px}.tool-table th,.tool-table td{padding:12px}.layout-wireframe>div{padding:15px}.layout-wireframe .wire-hero{grid-template-columns:1fr;gap:14px}}
 /* Shared petroleum hero background and assignment feedback. */
-#home{margin-top:24px;padding:0 34px 28px;border-radius:18px;background:linear-gradient(90deg,rgba(239,247,250,.97) 0%,rgba(239,247,250,.86) 43%,rgba(214,230,241,.24) 100%),url('https://long-geology-portfolio.kagi5197.chatgpt.site/petroleum-hero.webp') center/cover no-repeat;overflow:hidden}
+#home{margin-top:24px;padding:0 34px 28px;border-radius:18px;background:linear-gradient(90deg,rgba(239,247,250,.97) 0%,rgba(239,247,250,.86) 43%,rgba(214,230,241,.24) 100%),url('./petroleum-hero.webp') center/cover no-repeat;overflow:hidden}
 #home .hero{padding:48px 0 36px;gap:32px}
 #home .profile-card{background:rgba(13,38,54,.94);box-shadow:0 16px 40px #0d263633}
 #home .about-strip{padding:24px;border:1px solid #ffffffaa;border-radius:10px;background:rgba(246,250,252,.94)}
@@ -91,10 +91,10 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 .section-head h2{color:#fff;text-shadow:0 1px 8px #071c3020}
 .section-head p{color:#e1ebef}.section-head p.eyebrow{color:#acecde;margin-bottom:9px}
 .section-head .section-no{color:#cee2e8;align-self:flex-start;font-size:.8rem;letter-spacing:.05em}
-#assignments>.section-head{background:linear-gradient(90deg,rgba(9,35,50,.98) 0%,rgba(9,35,50,.90) 48%,rgba(9,35,50,.30) 100%),url('https://long-geology-portfolio.kagi5197.chatgpt.site/petroleum-hero.webp') 80% 53%/cover no-repeat}
+#assignments>.section-head{background:linear-gradient(90deg,rgba(9,35,50,.98) 0%,rgba(9,35,50,.90) 48%,rgba(9,35,50,.30) 100%),url('./petroleum-hero.webp') 80% 53%/cover no-repeat}
 #research>.section-head{background:linear-gradient(90deg,#10353c 0%,rgba(16,53,60,.94) 40%,rgba(16,53,60,.1) 100%),repeating-radial-gradient(ellipse at 95% 150%,transparent 0 14px,rgba(141,223,199,.36) 15px 16px,transparent 17px 28px),#16414a}
 #methodology>.section-head{background:linear-gradient(90deg,#112f47 0%,rgba(17,47,71,.93) 46%,rgba(17,47,71,.1) 100%),repeating-radial-gradient(ellipse at 100% 50%,transparent 0 17px,rgba(140,192,214,.29) 18px 19px,transparent 20px 34px),repeating-linear-gradient(90deg,transparent 0 47px,rgba(143,190,212,.10) 48px 49px),#163e53}
-#contact{position:relative;isolation:isolate;margin-top:14px;padding:34px 32px;border:1px solid #294b5d;border-radius:14px;color:#fff;background:linear-gradient(90deg,rgba(10,35,51,.97),rgba(10,35,51,.88) 62%,rgba(10,35,51,.70)),url('https://long-geology-portfolio.kagi5197.chatgpt.site/petroleum-hero.webp') center 70%/cover no-repeat}
+#contact{position:relative;isolation:isolate;margin-top:14px;padding:34px 32px;border:1px solid #294b5d;border-radius:14px;color:#fff;background:linear-gradient(90deg,rgba(10,35,51,.97),rgba(10,35,51,.88) 62%,rgba(10,35,51,.70)),url('./petroleum-hero.webp') center 70%/cover no-repeat}
 #contact h3{color:#fff;font-size:1.45rem;margin-bottom:12px}#contact p,#contact-links .contact-line span{color:#dce9ef}#contact a{color:#b8f5e5;font-weight:600}#contact a:hover{color:#fff}
 @media(max-width:700px){.section-head{padding:24px 22px;min-height:140px;align-items:flex-start}.section-head .section-no{display:none}.section-head h2{font-size:1.9rem}.section-head p{font-size:.95rem}#contact{padding:28px 22px;flex-direction:column;align-items:flex-start;gap:24px}#contact-links{max-width:100%;overflow-wrap:anywhere}#assignments>.section-head{background-position:70% 50%}}
 @media print{.section-head,#contact{background:#fff!important;border:1px solid #aaa;color:#142d3c}.section-head h2,.section-head p,.section-head .section-no,#contact h3,#contact p,#contact a,#contact-links .contact-line span{color:#142d3c!important}}
