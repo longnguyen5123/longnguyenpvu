@@ -186,22 +186,20 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 }
 
 /* Full-section petroleum photographs. Heading banners remain independent. */
-#home,#research,#assignments,#methodology{
+#research,#assignments,#methodology{
  background-color:#e8e4de;
  background-repeat:no-repeat;
  background-size:cover;
  background-position:center;
 }
-#home{background-image:linear-gradient(90deg,rgba(250,248,244,.94),rgba(250,248,244,.78) 52%,rgba(250,248,244,.24)),url('./assets/backgrounds/home.webp')}
 #research{background-image:linear-gradient(90deg,rgba(250,248,244,.88),rgba(250,248,244,.70) 55%,rgba(250,248,244,.26)),url('./assets/backgrounds/research.webp')}
 #assignments{background-image:linear-gradient(90deg,rgba(250,248,244,.84),rgba(250,248,244,.64)),url('./assets/backgrounds/assignments.webp')}
 #methodology{background-image:linear-gradient(90deg,rgba(250,248,244,.86),rgba(250,248,244,.62)),url('./assets/backgrounds/methodology.webp')}
-#home .about-strip{background:rgba(250,249,246,.94)}
 #assignments .coursework-menu{background:rgba(250,249,246,.96)}
 #methodology>.method-intro,#methodology>.references{background:rgba(250,249,246,.94);padding:18px 22px;border-radius:10px}
 @media(max-width:700px){
- #home,#research,#assignments,#methodology{background-position:65% center}
+ #research,#assignments,#methodology{background-position:65% center}
 }
 @media print{
- #home,#research,#assignments,#methodology{background:#fff!important}
+ #research,#assignments,#methodology{background:#fff!important}
 }
