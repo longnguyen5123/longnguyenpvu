@@ -164,13 +164,6 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 @media(min-width:1200px){#website>main{width:94%;max-width:2200px;padding-left:clamp(24px,2vw,56px);padding-right:clamp(24px,2vw,56px)}#website>.side{padding-left:max(3vw,calc((100vw - 2200px)/2 + 40px));padding-right:max(3vw,calc((100vw - 2200px)/2 + 40px))}.assignment-final p{max-width:100%}.assignment-copy>p{max-width:95ch}.hero .lead{max-width:72ch}.coursework-layout{grid-template-columns:180px minmax(0,1fr)}}
 .attachment-link{overflow-wrap:anywhere;white-space:normal}.translation-notice{color:#526d7b;font-style:italic}
 
-/* Bright daytime offshore hero; the dusk photo stays on the coursework banner and contact block. */
-#home{background:linear-gradient(90deg,rgba(247,251,253,.95) 0%,rgba(247,251,253,.86) 36%,rgba(247,251,253,.38) 60%,rgba(247,251,253,0) 82%),url('./offshore-day.svg') 72% 42%/cover no-repeat;border:1px solid #d3e3ea}
-
-#home .profile-card{background:#0d2636;box-shadow:0 18px 44px #0d263640}
-
-#home .about-strip{background:rgba(255,255,255,.93);border-color:#dbe7ec;box-shadow:0 8px 26px #0d26360f}
-
 /* One large light geological panel behind Research and Coursework, distinct from the dark section banners. */
 .section-band{position:relative;margin:34px 0 8px;padding:8px 34px 30px;border:1px solid #cfdfdf;border-radius:18px;background:linear-gradient(180deg,rgba(238,245,244,.08) 0,rgba(238,245,244,.3) 760px,rgba(238,245,244,.38) 100%),url('./strata-section.svg') center top/max(100%,980px) auto no-repeat,url('./strata-tile.svg') center 760px/1600px 800px repeat,#e7efee}
 
@@ -206,10 +199,9 @@ main{margin:0 auto;max-width:1320px;padding:0 40px}
 .profile-card dt{font-size:.68rem}
 }
 
-@media(max-width:700px){#home{background-position:70% 30%}
-.section-band{margin:24px 0 6px;padding:4px 16px 18px;border-radius:14px}
+@media(max-width:700px){.section-band{margin:24px 0 6px;padding:4px 16px 18px;border-radius:14px}
 .section-band>.section{padding:34px 0}
 }
 
-@media print{#home,.section-band{background:#fff!important;border:0}
+@media print{.section-band{background:#fff!important;border:0}
 }
